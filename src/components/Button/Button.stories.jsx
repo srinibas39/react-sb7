@@ -1,9 +1,16 @@
 import { Button } from "./Button.jsx"
+import { withActions } from '@storybook/addon-actions/decorator';
 
 
 export default {
     title: "Design System/Form/Button",
     component: Button,
+    parameters: {
+        actions: {
+            handles: ['mouseover', 'hover button'],
+        },
+    },
+    decorators: [withActions],
     argTypes: {
         backgroundColor: { control: "color" },
         textColor: { control: 'select', options: ['brown', 'magenta', "white", "black"] },
@@ -12,8 +19,10 @@ export default {
             options: ["left", "center", "right"],
         },
         border: { control: "boolean", options: ["yes", "no"] },
+        onClick: { action: "clicked" }
     },
     args: { textColor: 'white', align: "left", border: "no" },
+
 
 }
 
@@ -22,7 +31,7 @@ export const Primary = {
     args: {
         variant: "primary",
         children: "I am Primary Button",
-        backgroundColor: "",
+        // backgroundColor: "",
         // align:"center"
     },
     parameters: {
@@ -40,7 +49,7 @@ export const Secondary = {
     args: {
         variant: "secondary",
         children: "I am Secondary Button",
-        backgroundColor: ""
+        // backgroundColor: ""
     }
 }
 export const Success = {
