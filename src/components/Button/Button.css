@@ -1,0 +1,26 @@
+.button{
+    margin: "1rem";
+    padding: "1rem";
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-radius: "6px";
+    border: none;
+    min-height: 40px;
+}
+
+.primary{
+    background-color: black;
+}
+
+.secondary{
+    background-color: blue;
+}
+
+.success{
+    background-color: green;
+}
+
+.danger{
+    background-color: red;
+}
