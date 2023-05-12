@@ -9,8 +9,16 @@ const preview = {
       },
     },
   },
-  argTypes: { textColor: { control: 'select', options: ['brown', 'magenta', "white", "black"] } },
-  args: { textColor: 'white' },
+  // argTypes: {
+  //   textColor: { control: 'select', options: ['brown', 'magenta', "white", "black"] },
+  //   align: {
+  //     control: 'radio',
+  //     options: ["left", "center", "right"],
+  //   },
+
+  // },
+  // args: { textColor: 'white', align: "left" },
+
 };
 
 

@@ -4,9 +4,17 @@ import { Button } from "./Button.jsx"
 export default {
     title: "Design System/Form/Button",
     component: Button,
-    argsTypes: {
-        backgroundColor: { control: "color" }
+    argTypes: {
+        backgroundColor: { control: "color" },
+        textColor: { control: 'select', options: ['brown', 'magenta', "white", "black"] },
+        align: {
+            control: 'radio',
+            options: ["left", "center", "right"],
+        },
+        border: { control: "boolean", options: ["yes", "no"] },
     },
+    args: { textColor: 'white', align: "left", border: "no" },
+
 }
 
 
@@ -14,7 +22,8 @@ export const Primary = {
     args: {
         variant: "primary",
         children: "I am Primary Button",
-        backgroundColor: ""
+        backgroundColor: "",
+        // align:"center"
     },
     parameters: {
         backgrounds: {
