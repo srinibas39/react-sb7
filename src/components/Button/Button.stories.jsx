@@ -3,7 +3,10 @@ import { Button } from "./Button.jsx"
 
 export default {
     title: "Design System/Form/Button",
-    component: Button
+    component: Button,
+    argsTypes: {
+        backgroundColor: { control: "color" }
+    },
 }
 
 
@@ -11,7 +14,7 @@ export const Primary = {
     args: {
         variant: "primary",
         children: "I am Primary Button",
-        color: ""
+        backgroundColor: ""
 
     }
 }
@@ -20,21 +23,28 @@ export const Secondary = {
     args: {
         variant: "secondary",
         children: "I am Secondary Button",
-        color: ""
+        backgroundColor: ""
     }
 }
 export const Success = {
     args: {
         variant: "success",
         children: "I am Success Button",
-        color: ""
+        backgroundColor: ""
     }
 }
 export const Danger = {
     args: {
         variant: "danger",
         children: "I am Danger Button",
-        color: ""
+        backgroundColor: ""
     }
 }
 
+
+export const PrimaryLong = {
+    args: {
+        ...Primary.args,
+        children: "I am primary button and I have a long name"
+    }
+}

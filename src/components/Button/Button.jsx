@@ -1,5 +1,5 @@
 import "./Button.css"
 export const Button = (props) => {
-    const { variant, children, color, ...rest } = props
-    return <button className={`button ${variant}`} {...rest} style={{ background: color }}>{children}</button>
+    const { variant, children, backgroundColor, textColor, ...rest } = props
+    return <button className={`button ${variant}`} {...rest} style={{ backgroundColor: backgroundColor, color:textColor }}>{children}</button>
 }

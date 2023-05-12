@@ -9,6 +9,10 @@ const preview = {
       },
     },
   },
+  argTypes: { textColor: { control: 'select', options: ['brown', 'magenta', "white", "black"] } },
+  args: { textColor: 'white' },
 };
+
+
 
 export default preview;
