@@ -15,8 +15,16 @@ export const Primary = {
         variant: "primary",
         children: "I am Primary Button",
         backgroundColor: ""
-
-    }
+    },
+    parameters: {
+        backgrounds: {
+            values: [
+                { name: 'red', value: '#f00' },
+                { name: 'green', value: '#0f0' },
+                { name: 'blue', value: '#00f' },
+            ],
+        },
+    },
 }
 
 export const Secondary = {
