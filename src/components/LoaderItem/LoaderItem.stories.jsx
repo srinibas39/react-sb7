@@ -11,7 +11,7 @@ export const Primary = {
     loaders: [
         async () => ({
           todo: await (
-            await fetch('https://jsonplaceholder.typicode.com/todos/1')
+            await fetch('https://jsonplaceholder.typicode.com/todos')
           ).json(),
         }),
       ],
