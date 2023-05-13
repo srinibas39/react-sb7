@@ -10,6 +10,9 @@ const withCenterAlign = (Story) => {
 export default {
     title: "Design System/Form/Text",
     component: Text,
+    decorators: [
+        withCenterAlign,
+    ]
     
 }
 
@@ -17,7 +20,5 @@ export const Primary = {
     args: {
         children: "I am primary Text"
     },
-    decorators: [
-        withCenterAlign
-    ]
+   
 }

@@ -19,7 +19,7 @@ export default {
             options: ["left", "center", "right"],
         },
         border: { control: "boolean", options: ["yes", "no"] },
-        onClick: { action: "clicked" }
+        onClick: { action: "clicked something" }
     },
     args: { textColor: 'white', align: "left", border: "no" },
 
@@ -74,3 +74,5 @@ export const PrimaryLong = {
         children: "I am primary button and I have a long name"
     }
 }
+
+Primary.storyName="primary Button"
