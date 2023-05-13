@@ -1,4 +1,4 @@
-import { userEvent, within } from "@storybook/testing-library";
+import { userEvent, waitFor, within } from "@storybook/testing-library";
 import { Signup } from "./Signup";
 
 
@@ -48,7 +48,7 @@ export const ClickStory = {
 
         await userEvent.type(canvas.getByTestId("name"), "srinibas")
 
-        await userEvent.click(canvas.getByTestId("signupSubmit"), "hello")
+        await userEvent.click(canvas.getByTestId("signupSubmit"))
 
 
     }
@@ -64,13 +64,45 @@ export const SelectStory = {
 
         const select = canvas.getByTestId("cityBox");
 
-        await userEvent.selectOptions(select,['city 1'])
+        await userEvent.selectOptions(select, ['city 1'])
         await delay(1000);
 
-        await userEvent.selectOptions(select,['city 2'])
+        await userEvent.selectOptions(select, ['city 2'])
         await delay(1000);
 
-        await userEvent.selectOptions(select,["city 3"])
+        await userEvent.selectOptions(select, ["city 3"])
         await delay(1000)
     }
 }
+
+
+export const DelayedType = {
+    play: async ({ canvasElement }) => {
+
+        const canvas = within(canvasElement);
+
+
+        await FirstStory.play({ canvasElement })
+        await SecondStory.play({ canvasElement })
+
+        await userEvent.type(canvas.getByTestId("name"), "srinibas", { delay: 100 })
+
+        await userEvent.click(canvas.getByTestId("signupSubmit"))
+
+
+    }
+}
+
+// export const AsyncStory = {
+//     play: async ({ canvasElement }) => {
+
+//         const canvas = within(canvasElement);
+
+//         userEvent.type(canvas.getByTestId("email"), "srinibaskhuntia39@gmail.com", { delay: 100 })
+//         await userEvent.click(canvas.getByTestId("signupSubmit"))
+
+//         await waitFor(async () => {
+//             await userEvent.hover(canvas.getByTestId('error'));
+//         })
+//     }
+// }

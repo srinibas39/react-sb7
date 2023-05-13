@@ -15,5 +15,6 @@ export const Signup = () => {
             <option>city 2</option>
             <option>city 3</option>
         </select>
+        {/* <p date-testid="error">Wrong Info</p> */}
     </div>
 }
